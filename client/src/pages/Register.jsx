@@ -16,7 +16,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://user-management-app-qlrk.onrender.com/api/auth/register", form);
+      await axios.post("https://user-management-app-qlrk.onrender.com/", form);
       setMessage("Registered successfully. Please login.");
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
