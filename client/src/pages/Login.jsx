@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", form);
+      const res = await axios.post("https://user-management-app-qlrk.onrender.com/api/auth/login", form);
       localStorage.setItem("token", res.data.token);
       navigate("/dashboard");
     } catch (err) {
@@ -41,7 +41,7 @@ const Login = () => {
           required
         />
         <input
-          type="password" 
+          type="password"
           name="password"
           value={form.password}
           onChange={handleChange}
